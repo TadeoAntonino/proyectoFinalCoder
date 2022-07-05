@@ -1,0 +1,209 @@
+@charset "UTF-8";
+/* Estilos Generales*/
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600&family=Montserrat:wght@100;200;400&family=Nanum+Gothic:wght@400;700&family=Water+Brush&display=swap");
+.logo {
+  width: 60px;
+  height: 45px; }
+
+.font-color {
+  color: #fff7ec !important;
+  margin: 0; }
+
+.nav-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: end; }
+  .nav-cont ul li a:hover {
+    filter: saturate(100) !important; }
+
+.title-nav {
+  display: flex; }
+
+.navbar-toggler {
+  background-color: #3f4448; }
+
+.footer {
+  width: 100%;
+  background-color: #212529;
+  position: relative;
+  bottom: 0; }
+
+.foot-cont {
+  padding: 5px !important; }
+  .foot-cont .mb-4 {
+    margin-bottom: 0 !important; }
+    .foot-cont .mb-4 .elements-foot {
+      border: none;
+      margin: 0px; }
+      .foot-cont .mb-4 .elements-foot .icon-style {
+        filter: invert(100%) sepia(40%) saturate(266%) hue-rotate(309deg) brightness(116%) contrast(100%);
+        width: 25px;
+        height: 25px; }
+      .foot-cont .mb-4 .elements-foot .text-style {
+        display: flex; }
+        .foot-cont .mb-4 .elements-foot .text-style p {
+          margin-bottom: 0;
+          font-size: 15px; }
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth; }
+
+#root {
+  background-color: #fff7ec;
+  width: 100%;
+  height: 100vh; }
+
+/* Estilos Inicio */
+.galeria-index, .galeria-obras {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 0px;
+  margin-right: 0px; }
+  .galeria-index .cards-row, .galeria-obras .cards-row {
+    display: flex;
+    justify-content: center;
+    gap: 55px; }
+    .galeria-index .cards-row .card-cont, .galeria-obras .cards-row .card-cont {
+      width: 25pc;
+      height: 20pc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border: none;
+      transition: transform 0.5s; }
+      .galeria-index .cards-row .card-cont img, .galeria-obras .cards-row .card-cont img {
+        width: 100%;
+        height: 100%;
+        filter: grayscale(1);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px; }
+        .galeria-index .cards-row .card-cont img:hover, .galeria-obras .cards-row .card-cont img:hover {
+          filter: none; }
+      .galeria-index .cards-row .card-cont:hover, .galeria-obras .cards-row .card-cont:hover {
+        transform: scale(1.1, 1.1); }
+      .galeria-index .cards-row .card-cont .text-img, .galeria-obras .cards-row .card-cont .text-img {
+        margin: 0;
+        background-color: #191919;
+        color: #fff7ec;
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; }
+
+/* Estilos Servicios */
+.galeria-serv .cards-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  background-color: linear-gradient(to bottom, #fff7ec, #fff7ec, #fff7ec, #fff7ec, #fff7ec, #fdf4e9, #fbf2e5, #f9efe2, #f5e9da, #f0e3d3, #e7d8c4, #d6c4ac);
+  gap: 5vh;
+  font-family: 'Montserrat', sans-serif; }
+  .galeria-serv .cards-row .card {
+    width: 40vh;
+    height: 80vh;
+    background-color: #dcdbdb;
+    border-style: none;
+    transition: transform 0.5s; }
+    .galeria-serv .cards-row .card:hover {
+      transform: scale(1.05, 1.05); }
+    .galeria-serv .cards-row .card img {
+      height: 40vh;
+      margin: 1vh;
+      padding-top: 1vh;
+      padding-bottom: 1vh; }
+
+/*Estilos Galería de Nuestros Trabajos*/
+.galeria-obras {
+  gap: 7vh;
+  padding: 3vh; }
+
+/*Estilos Nosotros*/
+.nosotros {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to bottom, #fff7ec, #fff7ec, #fff7ec, #fff7ec, #fff7ec, #fdf4e9, #fbf2e5, #f9efe2, #f5e9da, #f0e3d3, #e7d8c4, #d6c4ac);
+  display: flex;
+  flex-direction: row;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #191919; }
+  .nosotros .foto-nos, .nosotros .text-nos {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 50%; }
+    .nosotros .foto-nos img, .nosotros .text-nos img {
+      height: 61vh;
+      border-radius: 10px;
+      margin: 5vh; }
+  .nosotros .text-nos {
+    justify-content: end;
+    font-size: 1.85rem; }
+    .nosotros .text-nos span {
+      font-style: italic;
+      font-weight: bold; }
+
+/*Estilos de Contacto*/
+.contacto {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .contacto .formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .contacto .form {
+    padding: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vh; }
+    .contacto .form .form-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 3vh; }
+      .contacto .form .form-2 div .datos, .contacto .form .form-2 div .consulta, .contacto .form .form-2 div .boton {
+        background-color: #191919;
+        color: #fff7ec;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 40vh;
+        height: 3vh;
+        border-radius: 10px;
+        border-style: none;
+        transition: transform 0.5s; }
+        .contacto .form .form-2 div .datos:hover, .contacto .form .form-2 div .consulta:hover, .contacto .form .form-2 div .boton:hover {
+          transform: scale(1.1, 1.1); }
+      .contacto .form .form-2 div .consulta {
+        height: 15vh;
+        width: 60vh; }
+      .contacto .form .form-2 div .boton {
+        width: 10vh; }
+  .contacto .mapa {
+    padding: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh; }
+    .contacto .mapa iframe {
+      border-radius: 10px;
+      transition: transform 0.5s; }
+      .contacto .mapa iframe:hover {
+        transform: scale(1.1, 1.1); }
