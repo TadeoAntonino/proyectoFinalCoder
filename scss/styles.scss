@@ -2,34 +2,33 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600&family=Montserrat:wght@100;200;400&family=Nanum+Gothic:wght@400;700&family=Water+Brush&display=swap");
 
-@import 'animate.css';
+@import "animate.css";
 
 $colores: (
   black: #191919,
-  white:#fff7ec,
-  bg:#ffedd5,
+  white: #fff7ec,
+  bg: #fff6ea,
 );
 
-@mixin flex-row-center{
-	display:flex;
-	justify-content:center;
+@mixin flex-row-center {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
-
 
 @import "_header";
 @import "_footer";
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  scroll-behavior: smooth
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 #root {
-    background-color: map-get($colores, bg );
-    width: 100%;
-    height: 100;
+  background-color: map-get($colores, bg);
+  width: 100%;
+  height: 100;
 }
 
 /* Estilos Inicio */
@@ -37,13 +36,13 @@ body {
 .galeria-index {
   margin-top: 3.2vh;
   margin-bottom: 3.2vh;
-  .cards-row{
+  .cards-row {
     display: flex;
     justify-content: center;
     gap: 55px;
     .card-cont {
-      width: 25pc;
-      height: 20pc;
+      width: 23pc;
+      height: 18.8pc;
       @include flex-row-center;
       flex-direction: column;
       border: none;
@@ -54,169 +53,170 @@ body {
         filter: grayscale(1);
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-        &:hover{
+        &:hover {
           filter: none;
         }
       }
-      &:hover{
-          transform: scale(1.1,1.1);
+      &:hover {
+        transform: scale(1.1, 1.1);
       }
       .text-img {
-          margin: 0;
-          background-color: map-get($colores , black ); 
-          color: map-get($colores, white );
-          width: 100%;
-          font-family: 'Montserrat', sans-serif;
-          text-align: center;
-          border-bottom-left-radius: 10px;
-          border-bottom-right-radius: 10px;   
+        margin: 0;
+        background-color: map-get($colores, black);
+        color: map-get($colores, white);
+        width: 100%;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
       }
     }
   }
 }
 
-  
-/* Estilos Servicios */ 
+/* Estilos Servicios */
 
 .galeria-serv {
-  .cards-row{
+  .cards-row {
     @include flex-row-center;
     flex-direction: row;
     width: 100%;
-    margin-top: 2.5vh;
-    margin-bottom: 2.5vh;
+    margin-top: 4.6vh;
+    margin-bottom: 4.6vh;
     padding-top: 1vh;
     padding-bottom: 1vh;
-    background-color: map-get($colores, bg );
-    gap: 5vh;
-    font-family: 'Montserrat', sans-serif;
-    .card {
-      width: 40vh;
-      height: 80vh;
-      background-color: rgb(220, 219, 219);
-      border-style: none;
-      transition: transform 0.5s;
-      &:hover{
-        transform: scale(1.05,1.05);
-      }
-      img {
-        height: 40vh;
-        margin: 1vh;
-        padding-top: 1vh;
-        padding-bottom: 1vh;
-      }
-      .card-body{
-        .card-title{
-          font-weight: bold;
+    background-color: map-get($colores, bg);
+    gap: 1vh;
+    font-family: "Montserrat", sans-serif;
+    .col {
+      @include flex-row-center;
+      .card {
+        width: 40vh;
+        background-color: #dcdbdb;
+        border-style: none;
+        transition: transform 0.5s;
+        &:hover {
+          transform: scale(1.05, 1.05);
+        }
+        .card-img-top {
+          height: 40vh;
+          width: 95%;
+          margin: 1vh;
+          padding: 1vh;
+        }
+        .card-body {
+          .card-title {
+            font-weight: bold;
+          }
         }
       }
     }
   }
-  }
+}
 
-  /*Estilos Galería de Nuestros Trabajos*/ 
+/*Estilos Galería de Nuestros Trabajos*/
 
-  .galeria-obras {
-    @extend .galeria-index;
-    gap: 7vh;
-    padding: 3vh;
-    margin-top: 4.8vh;
-    margin-bottom: 4.5vh;
-  }
+.galeria-obras {
+  @extend .galeria-index;
+  gap: 7vh;
+  padding: 3vh;
+  margin-top: 6.7vh;
+  margin-bottom: 6.5vh;
+}
 
-  /*Estilos Nosotros*/ 
+/*Estilos Nosotros*/
 
-  .nosotros {
-    margin-top: 12vh;
-    margin-bottom: 11vh;
-    display: flex;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    color: #191919;
-    .foto-nos {
-      justify-content: start;
-      align-items: center;
-      img{
-        border-radius: 10px;
-        height: 100%;
-        width: 100%;
-      } 
+.nosotros {
+  margin-top: 12vh;
+  margin-bottom: 11.4vh;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #191919;
+  .foto-nos {
+    justify-content: start;
+    align-items: center;
+    img {
+      border-radius: 10px;
+      height: 100%;
+      width: 100%;
     }
-    .text-nos {
-      @extend .foto-nos;
-      justify-content: end;
-      font-size: 1.85rem;
-      span{
-        font-style: italic;
-        font-weight: bold;
-      }
-      p {
-        animation: bounce;
-        animation-duration: 2s; 
-      }
-    } 
   }
+  .text-nos {
+    @extend .foto-nos;
+    justify-content: end;
+    font-size: 1.7rem;
+    span {
+      font-style: italic;
+      font-weight: bold;
+    }
+  }
+}
 
-  /*Estilos de Contacto*/ 
+/*Estilos de Contacto*/
 
-  .contacto {
-    width: 100%;
-    margin-top: 9.9vh;
-    margin-bottom: 9.9vh;
+.contacto {
+  width: 100%;
+  margin-top: 9.9vh;
+  margin-bottom: 9.9vh;
+  @include flex-row-center;
+  .formulario {
     @include flex-row-center;
-    .formulario {
-      @include flex-row-center;
-    }
-    .form {
-      padding: 5vh;
+  }
+  .form {
+    padding: 5vh;
+    @include flex-row-center;
+    flex-direction: column;
+    gap: 3vh;
+    .form-2 {
       @include flex-row-center;
       flex-direction: column;
       gap: 3vh;
-      .form-2 {
-        @include flex-row-center;
-        flex-direction: column;
-        gap: 3vh;
-        div{
-          .datos {
-            background-color: map-get($colores, black );
-            color: map-get($colores, white );
-            text-align: center;
-            @include flex-row-center;
-            flex-direction: column;
-            width: 40vh;
-            height: 3vh;
-            border-radius: 10px;
-            border-style: none;
-            transition: transform 0.5s;
-            &:hover {
-              transform: scale(1.1,1.1);
-            }
-          }
-          .consulta {
-            @extend .datos;
-            height: 15vh;
-            width: 40vh;
-          }
-          .boton {
-            @extend .datos;
-            width: 10vh;
+      div {
+        .datos {
+          background-color: map-get($colores, black);
+          color: map-get($colores, white);
+          text-align: center;
+          @include flex-row-center;
+          flex-direction: column;
+          width: 40vh;
+          height: 3vh;
+          border-radius: 10px;
+          border-style: none;
+          transition: transform 0.5s;
+          &:hover {
+            transform: scale(1.1, 1.1);
           }
         }
-      }
-  
-    }
-    .mapa {
-      padding: 5vh;
-      @include flex-row-center;
-      flex-direction: column;
-      gap: 2vh;
-      iframe {
-        width: 100%;
-        border-radius: 10px;
-        transition: transform 0.5s;
-        &:hover {
-          transform: scale(1.1,1.1);
-      }
+        .consulta {
+          @extend .datos;
+          height: 15vh;
+          width: 40vh;
+        }
+        .boton {
+          @extend .datos;
+          width: 10vh;
+        }
       }
     }
   }
+  .mapa {
+    padding: 5vh;
+    @include flex-row-center;
+    flex-direction: column;
+    gap: 2vh;
+    h2 {
+      text-align: center;
+    }
+    iframe {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.5s;
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
+    }
+  }
+}
