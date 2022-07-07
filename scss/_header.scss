@@ -29,3 +29,11 @@
   .navbar-toggler {
     background-color: #3f4448;
   }
+
+  .navbar {
+    .cont-nav {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  }

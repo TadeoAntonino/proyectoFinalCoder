@@ -2,10 +2,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600&family=Montserrat:wght@100;200;400&family=Nanum+Gothic:wght@400;700&family=Water+Brush&display=swap");
 
+@import 'animate.css';
+
 $colores: (
   black: #191919,
   white:#fff7ec,
-  bg: linear-gradient(to bottom, #fff7ec, #fff7ec, #fff7ec, #fff7ec, #fff7ec, #fdf4e9, #fbf2e5, #f9efe2, #f5e9da, #f0e3d3, #e7d8c4, #d6c4ac)
+  bg:#ffedd5,
 );
 
 @mixin flex-row-center{
@@ -25,19 +27,16 @@ body {
 }
 
 #root {
-    background-color: map-get($colores, white );
+    background-color: map-get($colores, bg );
     width: 100%;
-    height: 100vh;
+    height: 100;
 }
-
 
 /* Estilos Inicio */
 
 .galeria-index {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-top: 3.2vh;
+  margin-bottom: 3.2vh;
   .cards-row{
     display: flex;
     justify-content: center;
@@ -84,6 +83,8 @@ body {
     @include flex-row-center;
     flex-direction: row;
     width: 100%;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
     padding-top: 1vh;
     padding-bottom: 1vh;
     background-color: map-get($colores, bg );
@@ -104,6 +105,11 @@ body {
         padding-top: 1vh;
         padding-bottom: 1vh;
       }
+      .card-body{
+        .card-title{
+          font-weight: bold;
+        }
+      }
     }
   }
   }
@@ -114,28 +120,26 @@ body {
     @extend .galeria-index;
     gap: 7vh;
     padding: 3vh;
+    margin-top: 4.8vh;
+    margin-bottom: 4.5vh;
   }
 
   /*Estilos Nosotros*/ 
 
   .nosotros {
-    height: 100%;
-    width: 100%;
-    background-image: map-get($colores, bg );
+    margin-top: 12vh;
+    margin-bottom: 11vh;
     display: flex;
-    flex-direction: row;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
-    color: map-get($colores , black );
+    color: #191919;
     .foto-nos {
-      display: flex;
       justify-content: start;
       align-items: center;
-      width: 50%;
       img{
-        height: 61vh;
         border-radius: 10px;
-        margin: 5vh;
+        height: 100%;
+        width: 100%;
       } 
     }
     .text-nos {
@@ -146,6 +150,10 @@ body {
         font-style: italic;
         font-weight: bold;
       }
+      p {
+        animation: bounce;
+        animation-duration: 2s; 
+      }
     } 
   }
 
@@ -153,7 +161,8 @@ body {
 
   .contacto {
     width: 100%;
-    height: auto;
+    margin-top: 9.9vh;
+    margin-bottom: 9.9vh;
     @include flex-row-center;
     .formulario {
       @include flex-row-center;
@@ -186,7 +195,7 @@ body {
           .consulta {
             @extend .datos;
             height: 15vh;
-            width: 60vh;
+            width: 40vh;
           }
           .boton {
             @extend .datos;
@@ -202,6 +211,7 @@ body {
       flex-direction: column;
       gap: 2vh;
       iframe {
+        width: 100%;
         border-radius: 10px;
         transition: transform 0.5s;
         &:hover {

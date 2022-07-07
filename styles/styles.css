@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Estilos Generales*/
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600&family=Montserrat:wght@100;200;400&family=Nanum+Gothic:wght@400;700&family=Water+Brush&display=swap");
+@import url(animate.css);
 .logo {
   width: 60px;
   height: 45px; }
@@ -22,6 +23,11 @@
 .navbar-toggler {
   background-color: #3f4448; }
 
+.navbar .cont-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; }
+
 .footer {
   width: 100%;
   background-color: #212529;
@@ -32,6 +38,8 @@
   padding: 5px !important; }
   .foot-cont .mb-4 {
     margin-bottom: 0 !important; }
+    .foot-cont .mb-4 a {
+      text-decoration: none; }
     .foot-cont .mb-4 .elements-foot {
       border: none;
       margin: 0px; }
@@ -51,16 +59,14 @@ body {
   scroll-behavior: smooth; }
 
 #root {
-  background-color: #fff7ec;
+  background-color: #ffedd5;
   width: 100%;
-  height: 100vh; }
+  height: 100; }
 
 /* Estilos Inicio */
 .galeria-index, .galeria-obras {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-left: 0px;
-  margin-right: 0px; }
+  margin-top: 3.2vh;
+  margin-bottom: 3.2vh; }
   .galeria-index .cards-row, .galeria-obras .cards-row {
     display: flex;
     justify-content: center;
@@ -101,9 +107,11 @@ body {
   align-items: center;
   flex-direction: row;
   width: 100%;
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
   padding-top: 1vh;
   padding-bottom: 1vh;
-  background-color: linear-gradient(to bottom, #fff7ec, #fff7ec, #fff7ec, #fff7ec, #fff7ec, #fdf4e9, #fbf2e5, #f9efe2, #f5e9da, #f0e3d3, #e7d8c4, #d6c4ac);
+  background-color: #ffedd5;
   gap: 5vh;
   font-family: 'Montserrat', sans-serif; }
   .galeria-serv .cards-row .card {
@@ -119,42 +127,46 @@ body {
       margin: 1vh;
       padding-top: 1vh;
       padding-bottom: 1vh; }
+    .galeria-serv .cards-row .card .card-body .card-title {
+      font-weight: bold; }
 
 /*Estilos Galería de Nuestros Trabajos*/
 .galeria-obras {
   gap: 7vh;
-  padding: 3vh; }
+  padding: 3vh;
+  margin-top: 4.8vh;
+  margin-bottom: 4.5vh; }
 
 /*Estilos Nosotros*/
 .nosotros {
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(to bottom, #fff7ec, #fff7ec, #fff7ec, #fff7ec, #fff7ec, #fdf4e9, #fbf2e5, #f9efe2, #f5e9da, #f0e3d3, #e7d8c4, #d6c4ac);
+  margin-top: 12vh;
+  margin-bottom: 11vh;
   display: flex;
-  flex-direction: row;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   color: #191919; }
   .nosotros .foto-nos, .nosotros .text-nos {
-    display: flex;
     justify-content: start;
-    align-items: center;
-    width: 50%; }
+    align-items: center; }
     .nosotros .foto-nos img, .nosotros .text-nos img {
-      height: 61vh;
       border-radius: 10px;
-      margin: 5vh; }
+      height: 100%;
+      width: 100%; }
   .nosotros .text-nos {
     justify-content: end;
     font-size: 1.85rem; }
     .nosotros .text-nos span {
       font-style: italic;
       font-weight: bold; }
+    .nosotros .text-nos p {
+      animation: bounce;
+      animation-duration: 2s; }
 
 /*Estilos de Contacto*/
 .contacto {
   width: 100%;
-  height: auto;
+  margin-top: 9.9vh;
+  margin-bottom: 9.9vh;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -192,7 +204,7 @@ body {
           transform: scale(1.1, 1.1); }
       .contacto .form .form-2 div .consulta {
         height: 15vh;
-        width: 60vh; }
+        width: 40vh; }
       .contacto .form .form-2 div .boton {
         width: 10vh; }
   .contacto .mapa {
@@ -203,6 +215,7 @@ body {
     flex-direction: column;
     gap: 2vh; }
     .contacto .mapa iframe {
+      width: 100%;
       border-radius: 10px;
       transition: transform 0.5s; }
       .contacto .mapa iframe:hover {
