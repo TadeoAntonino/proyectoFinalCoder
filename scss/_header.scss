@@ -1,6 +1,9 @@
 .logo {
   width: 60px;
   height: 45px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .font-color {
@@ -27,5 +30,11 @@
 }
 
 .navbar-toggler {
-  background-color: #3f4448;
+  background-color: #363a3d;
+}
+
+.navbar-brand {
+  margin-right: 0;
+  gap: 10px;
+  padding: 0;
 }
