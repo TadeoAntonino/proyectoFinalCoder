@@ -200,7 +200,7 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 24pc;
+        width: 22pc;
         height: 3pc;
         border-radius: 10px;
         border-style: none;
@@ -209,7 +209,7 @@ body {
           transform: scale(1.1, 1.1); }
       .contacto .form .form-2 div .consulta {
         height: 10pc;
-        width: 24pc; }
+        width: 22pc; }
       .contacto .form .form-2 div .boton {
         width: 10pc; }
   .contacto .mapa {

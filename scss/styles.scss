@@ -181,7 +181,7 @@ body {
           text-align: center;
           @include flex-row-center;
           flex-direction: column;
-          width: 24pc;
+          width: 22pc;
           height: 3pc;
           border-radius: 10px;
           border-style: none;
@@ -193,7 +193,7 @@ body {
         .consulta {
           @extend .datos;
           height: 10pc;
-          width: 24pc;
+          width: 22pc;
         }
         .boton {
           @extend .datos;
